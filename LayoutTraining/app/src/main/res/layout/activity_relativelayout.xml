@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <TextView
+            android:id="@+id/tx_one"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+
+            android:text="Hello World!"
+            android:background="#9c9292" />
+
+        <TextView
+            android:id="@+id/tx_two"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:text="Hello World!"
+            android:background="#0d6074" />
+
+        <TextView
+            android:id="@+id/tx_three"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+
+            android:text="Hello World!"
+            android:background="#a73956" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rel1">
+        <TextView
+            android:id="@+id/tx4"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:text="Hello World!"
+            android:background="#9c9292" />
+
+        <TextView
+            android:id="@+id/tx5"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:text="Hello World!"
+            android:background="#0d6074" />
+
+        <TextView
+            android:id="@+id/tx6"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+
+            android:text="Hello World!"
+            android:background="#a73956" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/rel2">
+        <TextView
+            android:id="@+id/tx33"
+            android:textSize="30sp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignStart="@+id/tx11"
+            android:layout_alignLeft="@+id/tx11"
+            android:layout_above="@+id/tx11"
+
+            android:text="Hello World!"
+            android:background="#9c9292" />
+
+        <TextView
+            android:id="@+id/tx22"
+            android:textSize="20sp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/tx11"
+            android:layout_alignEnd="@+id/tx11"
+            android:layout_alignRight="@+id/tx11"
+
+            android:text="Hello World!"
+            android:background="#0d6074" />
+
+        <TextView
+            android:id="@+id/tx11"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+
+            android:text="Hello World!"
+            android:background="#a73956" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/rel3"
+        android:layout_marginTop="30dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnConstraintLayout"
+            android:text="To ConstraintLayout"
+            android:background="@color/colorBtn"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
