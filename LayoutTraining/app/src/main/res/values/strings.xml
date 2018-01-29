@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">LayoutTraining</string>
+    <string name="china">China</string>
+    <string name="text_value">value</string>
+    <string name="china_description">La Chine est un pays très peuplé d’Asie de l’est.L’emblématique Grande Muraille de Chine partage le nord du pays d’est en ouest.
+</string>
+    <string name="discard">discard</string>
+    <string name="send">send</string>
+    <string name="email_value">email</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="name_value">name</string>
+    <string name="placeholder">placeholder</string>
 </resources>
