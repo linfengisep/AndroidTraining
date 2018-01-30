@@ -2,12 +2,24 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sidespinner="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="10dp">
     <isep.layouttraining.CompoundLayoutView
+        android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sideSpinner_company"
         android:layout_centerHorizontal="true"/>
+
+    <isep.layouttraining.CompoundLayoutView
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sideSpinner_vegetable"
+        android:gravity="center"
+        android:layout_below="@id/sideSpinner_company"
+        android:layout_centerHorizontal="true"
+        sidespinner:values="@array/vegetable_array"/>
 </RelativeLayout>

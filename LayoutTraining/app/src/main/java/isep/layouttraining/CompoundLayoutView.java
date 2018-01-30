@@ -1,6 +1,7 @@
 package isep.layouttraining;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,10 +29,22 @@ public class CompoundLayoutView extends LinearLayout {
     }
     public CompoundLayoutView(Context context, AttributeSet attrs){
         super(context,attrs);
+        //to get the value of our custom values attribute, call obtainStyledAttributes method of AttributeSet object first,
+        //it returns a typeArray object;
+        TypedArray typedArray;
+        typedArray=context.obtainStyledAttributes(attrs,R.styleable.CompoundLayoutView);
+        mSpinnerValues=typedArray.getTextArray(R.styleable.CompoundLayoutView_values);
+        typedArray.recycle();//it is shared resource and must be recycled after use.
+
         init(context);
     }
     public CompoundLayoutView(Context context, AttributeSet attrs, int defStyle){
         super(context,attrs,defStyle);
+        TypedArray typedArray;
+        typedArray=context.obtainStyledAttributes(attrs,R.styleable.CompoundLayoutView);
+        mSpinnerValues=typedArray.getTextArray(R.styleable.CompoundLayoutView_values);
+        typedArray.recycle();
+
         init(context);
     }
     private void init(Context context){
