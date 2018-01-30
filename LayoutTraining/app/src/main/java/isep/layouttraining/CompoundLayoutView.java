@@ -2,7 +2,10 @@ package isep.layouttraining;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -16,12 +19,17 @@ import android.widget.TextView;
 // the built-in layouts and inflate custom layout during initialization
 
 public class CompoundLayoutView extends LinearLayout {
+
     private TextView value;
     private Button arrowLeft;
     private Button arrowRight;
 
     private CharSequence[] mSpinnerValues = null;
     private int mSelectedIndex = -1;
+
+
+    private static String STATE_SELECTED_INDEX = "SelectedIndex";
+    private static String STATE_SUPER_CLASS = "SuperClass";
 
     public CompoundLayoutView(Context context){
         super(context);
@@ -129,4 +137,35 @@ public class CompoundLayoutView extends LinearLayout {
     public int getSelectedIndex(){
         return mSelectedIndex;
     }
+
+    /*save state and restore state when rotate;
+    @Override
+    protected Parcelable onSavedInstanceState(){
+        Bundle bundle=new Bundle();
+        bundle.putParcelable(STATE_SUPER_CLASS,super.onSaveInstanceState());
+        bundle.putInt(STATE_SELECTED_INDEX,mSelectedIndex);
+        return bundle;
+    }
+
+    @Override
+    protected void onRestoreInstaceState(Parcelable state){
+        if(state instanceof Bundle){
+            Bundle bundle=(Bundle)state;
+            super.onRestoreInstanceState(bundle.getParcelable(STATE_SUPER_CLASS));
+            setSelectedIndex(bundle.getInt(STATE_SELECTED_INDEX));
+        }else{
+            super.onRestoreInstanceState(state);
+        }
+    }
+
+    @Override
+    protected void dispatchSaveInstanceState(SparseArray<Parcelable> container) {
+        super.dispatchFreezeSelfOnly(container);
+    }
+
+    @Override
+    protected void dispatchRestoreInstanceState(SparseArray<Parcelable> container) {
+        super.dispatchThawSelfOnly(container);
+    }
+    */
 }

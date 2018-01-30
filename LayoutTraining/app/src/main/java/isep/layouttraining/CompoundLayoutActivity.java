@@ -2,6 +2,7 @@ package isep.layouttraining;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 
 /**
@@ -9,6 +10,7 @@ import android.support.annotation.Nullable;
  */
 
 public class CompoundLayoutActivity extends Activity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
