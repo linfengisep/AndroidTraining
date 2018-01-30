@@ -42,7 +42,7 @@ public class CompoundLayoutView extends LinearLayout {
     protected void onFinishInflate(){
         super.onFinishInflate();
         arrowLeft=(Button)findViewById(R.id.arrow_left);
-        arrowLeft.setBackgroundResource(R.drawable.arrow_right);
+        arrowLeft.setBackgroundResource(R.drawable.arrow_left);
 
         arrowLeft.setOnClickListener(new OnClickListener() {
             @Override

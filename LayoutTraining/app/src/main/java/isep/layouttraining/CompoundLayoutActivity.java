@@ -14,5 +14,14 @@ public class CompoundLayoutActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compoundlayout);
 
+        //initialize the side spinner from code;
+        CompoundLayoutView companySpinner;
+        companySpinner=(CompoundLayoutView)findViewById(R.id.sideSpinner_company);
+
+        CharSequence company[]={"Apple","Facebook","Heylo","IBM","Tweeter","Oracle","Alibaba","Tasla","Whatup"};
+
+        companySpinner.setValues(company);
+        companySpinner.setSelectedIndex(1);
     }
 }
+
