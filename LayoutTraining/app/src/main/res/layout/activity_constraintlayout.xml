@@ -166,12 +166,13 @@
         android:layout_marginLeft="8dp" />
 
     <Button
-        android:text="@string/send"
+        android:text="@string/to_compound_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_editor_absoluteX="307dp"
         app:layout_editor_absoluteY="538dp"
-        android:id="@+id/upload"
+        android:background="@color/colorBtn"
+        android:id="@+id/to_compound_view"
         app:layout_constraintRight_creator="1"
         app:layout_constraintBottom_creator="1"
         tools:layout_editor_absoluteX="307dp"
@@ -185,21 +186,21 @@
         android:layout_marginRight="16dp" />
 
     <Button
-        android:text="@string/discard"
+        android:text="@string/send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_editor_absoluteX="211dp"
         app:layout_editor_absoluteY="538dp"
-        android:id="@+id/discard"
+        android:id="@+id/send"
         android:elevation="0dp"
         app:layout_constraintRight_creator="0"
         app:layout_constraintBaseline_creator="1"
         tools:layout_editor_absoluteX="211dp"
         tools:layout_editor_absoluteY="538dp"
-        app:layout_constraintRight_toLeftOf="@+id/upload"
+        app:layout_constraintRight_toLeftOf="@+id/to_compound_view"
         android:layout_marginEnd="8dp"
         tools:layout_constraintRight_creator="0"
-        app:layout_constraintBaseline_toBaselineOf="@+id/upload"
+        app:layout_constraintBaseline_toBaselineOf="@+id/to_compound_view"
         tools:layout_constraintBaseline_creator="0"
         android:layout_marginRight="8dp" />
 
@@ -228,7 +229,7 @@
         app:layout_constraintRight_toRightOf="@+id/activity_main_done"
         android:layout_marginEnd="16dp"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/discard"
+        app:layout_constraintBottom_toTopOf="@+id/send"
         android:layout_marginBottom="8dp"
         tools:layout_constraintBottom_creator="1" />
 
