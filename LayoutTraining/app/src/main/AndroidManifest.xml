@@ -19,6 +19,7 @@
         <activity android:name=".RelativeLayoutActivity"/>
         <activity android:name=".ConstraintLayoutActivity"/>
         <activity android:name=".CompoundLayoutActivity"/>
+        <activity android:name=".RoundCornerDrawableActivity"/>
     </application>
 
 </manifest>

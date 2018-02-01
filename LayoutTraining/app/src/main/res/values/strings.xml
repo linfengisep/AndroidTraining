@@ -13,6 +13,7 @@
     <string name="placeholder">placeholder</string>
     <string name="value">value</string>
     <string name="card_descrip">card description</string>
+    <string name="round_btn">To Round view</string>
 
     <string-array name="vegetable_array">
         <item>Cucumber</item>

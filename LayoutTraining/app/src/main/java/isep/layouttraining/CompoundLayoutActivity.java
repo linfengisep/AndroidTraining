@@ -1,15 +1,19 @@
 package isep.layouttraining;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.Button;
 
 /**
  * Created by linfengwang on 30/01/2018.
  */
 
 public class CompoundLayoutActivity extends Activity {
+    Button btnToRoundConnerView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +28,15 @@ public class CompoundLayoutActivity extends Activity {
 
         companySpinner.setValues(company);
         companySpinner.setSelectedIndex(1);
+
+        btnToRoundConnerView=findViewById(R.id.round_corner);
+        btnToRoundConnerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent roundCornerView= new Intent(CompoundLayoutActivity.this,RoundCornerDrawableActivity.class);
+                startActivity(roundCornerView);
+            }
+        });
     }
 }
 
