@@ -8,9 +8,17 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginLeft="150dp"
         android:id="@+id/dogview"
         android:layout_gravity="center"
         android:src="@drawable/dog"
         android:contentDescription="@string/card_descrip"
         android:background="@android:color/transparent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_image_view"
+        android:background="@drawable/mlogo"
+        android:text="@string/name"/>
 </LinearLayout>
