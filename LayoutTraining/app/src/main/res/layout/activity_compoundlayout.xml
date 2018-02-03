@@ -24,7 +24,7 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="50dp"
         android:id="@+id/round_corner"
         android:text="@string/round_btn"
         android:background="@color/cardbackground"

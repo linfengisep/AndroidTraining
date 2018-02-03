@@ -6,4 +6,6 @@
     <color name="colorBtn">#FF1</color>
 
     <color name="cardbackground">#FF1</color>
+    <color name="btn_toggle">#87d5dd</color>
+    <color name="text_bg">#64fcf4</color>
 </resources>
