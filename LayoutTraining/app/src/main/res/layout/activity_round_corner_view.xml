@@ -2,12 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:style="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/china">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_marginTop="20dp"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -42,75 +40,53 @@
         android:textOn="On"
         android:background="@color/btn_toggle"/>
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="vertical"
-       android:layout_marginBottom="15dp"
-       android:layout_marginTop="10dp">
-       <Button
-           android:layout_width="match_parent"
-           android:layout_height="50dp"
-           android:id="@+id/enable_disable_switch"
-           android:background="@color/colorBtn"
-           android:text="@string/disable_switch_text"
-           android:layout_marginLeft="45dp"
-           android:layout_marginRight="45dp"
-           android:onClick="button_click"/>
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
+       <Switch
+           android:id="@+id/switch_media"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
            android:layout_marginTop="10dp"
-           android:orientation="vertical">
-           <Switch
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/switch_media"
-               android:textOn="On"
-               android:textOff="Off"
-               android:text="Media volume"
-               android:textColor="@color/colorBtn"
-               android:onClick="onSwitchClicked"
-               android:thumb="@drawable/switch_bg"
-               android:track="@drawable/track_bg"
-               android:layout_marginLeft="50dp"
-               android:layout_marginRight="50dp"
-               android:layout_marginBottom="20dp"
-               android:gravity="left"/>
-           <Switch
-               android:id="@+id/switch_wifi"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="50dp"
-               android:layout_marginLeft="50dp"
-               android:layout_marginRight="50dp"
-               android:textOn="On"
-               android:textOff="Off"
-               android:textColor="@color/colorBtn"
-               android:text="Wifi"
-               android:onClick="onSwitchClicked"
-               android:thumb="@drawable/switch_bg"
-               android:track="@drawable/track_bg"
-               android:gravity="left"/>
-       </RelativeLayout>
+           android:showText="true"
+           android:textOn="on"
+           android:textOff="off"
+           android:layout_gravity="center_horizontal"
+           android:onClick="onSwitchClicked"
+           android:thumb="@drawable/switch_bg"
+           android:track="@drawable/track_bg"/>
+
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:showText="true"
+            android:textOff="LIVE"
+            android:textOn="SPOT"
+            android:text="Heylo"
+            android:textColor="@color/white"
+            android:switchPadding="30dp"
+            android:thumbTextPadding="10sp"
+            android:splitTrack="true"
+            android:track="@drawable/switch_track_selector"
+            android:thumb="@drawable/switch_thumb_selector"
+            android:id="@+id/spot_switch"/>
        <TextView
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:id="@+id/show_area"
            android:textSize="18sp"
            android:layout_marginTop="10dp"
-           android:text="Show spinner choice"
+           android:text="Show spot choice"
            android:textColor="@color/colorAccent"
            android:gravity="center_horizontal"
-           android:textStyle="bold"/>
-   </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_result"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        android:text="Send"
-        android:background="@color/colorBtn"
-        android:layout_gravity="center_horizontal"/>
+               android:textStyle="bold"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_result"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Send"
+            android:background="@color/colorBtn"
+            android:layout_gravity="center_horizontal"/>
 </LinearLayout>

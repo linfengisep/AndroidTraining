@@ -17,6 +17,7 @@
     <string name="disable_switch_text">Disable all switch</string>
     <string name="media_volume">Media Volume</string>
     <string name="wifi_text">Wifi</string>
+    <string name="pie_name">Pie name</string>
 
     <string-array name="vegetable_array">
         <item>Cucumber</item>

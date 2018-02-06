@@ -8,4 +8,13 @@
     <color name="cardbackground">#FF1</color>
     <color name="btn_toggle">#87d5dd</color>
     <color name="text_bg">#64fcf4</color>
+
+    <color name="enable">#edf0f4</color>
+    <color name="check_on">#64fcf4</color>
+    <color name="pressed">#64685f</color>
+    <color name="track_disable">#99ccc9</color>
+    <color name="track_default">#b9e285</color>
+    <color name="white">#ffffff</color>
+    <color name="switch_backgroud">#d9d9d9</color>
+
 </resources>

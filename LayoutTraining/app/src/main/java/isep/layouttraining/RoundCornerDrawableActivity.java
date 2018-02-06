@@ -32,7 +32,6 @@ public class RoundCornerDrawableActivity extends Activity {
     ToggleButton btnToggle;
     TextView actionText;
     AudioManager audioManager;
-    WifiManager wifiManager;
 
     Switch switchMedia;
     Switch switchWifi;
@@ -47,8 +46,6 @@ public class RoundCornerDrawableActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_round_corner_view);
 
-        //enable_disable_switch
-        enable_disable_switch=findViewById(R.id.enable_disable_switch);
         //shape drawable;
         myLogo = findViewById(R.id.my_image_view);
         myLogo.setImageResource(R.drawable.mlogo);
@@ -89,7 +86,6 @@ public class RoundCornerDrawableActivity extends Activity {
 
         //get the switch
         switchMedia=findViewById(R.id.switch_media);
-        switchWifi=findViewById(R.id.switch_wifi);
         btnResult=findViewById(R.id.btn_result);
         btnResult.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,14 +96,8 @@ public class RoundCornerDrawableActivity extends Activity {
                 }else{
                     statusSwitchMedia=switchMedia.getTextOff().toString();
                 }
-
-                if(switchWifi.isChecked()){
-                    statusSwitchWifi=switchWifi.getTextOn().toString();
-                }else{
-                    statusSwitchWifi=switchWifi.getTextOff().toString();
-                }
-                Toast.makeText(RoundCornerDrawableActivity.this,"Media state: "
-                        +statusSwitchMedia+"\n"+"Wifi state: "+statusSwitchWifi,Toast.LENGTH_SHORT).show();
+                Toast.makeText(RoundCornerDrawableActivity.this,"Spot state: "
+                        +statusSwitchMedia,Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -117,26 +107,11 @@ public class RoundCornerDrawableActivity extends Activity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
                 if(buttonView.isChecked()){
-                    show_area.setText("Media volume :ON by drag thumb");
-                    audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,8,0);
+                    show_area.setText("Spot :ON by drag thumb");
+                    //audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,8,0);
                 }else{
-                    show_area.setText("Media volume :OFF by drag thumb");
-                    audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,0,0);
-                }
-            }
-        });
-
-        switchWifi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
-                if(buttonView.isChecked()){
-                    show_area.setText("Wifi: ON by drag thumb");
-                    wifiManager=(WifiManager)getSystemService(Context.WIFI_SERVICE);
-                    wifiManager.setWifiEnabled(true);
-                }else{
-                    show_area.setText("Wifi :OFF by drag thumb");
-                    wifiManager=(WifiManager)getSystemService(Context.WIFI_SERVICE);
-                    wifiManager.setWifiEnabled(false);
+                    show_area.setText("Spot :OFF by drag thumb");
+                    //audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,0,0);
                 }
             }
         });
@@ -147,41 +122,14 @@ public class RoundCornerDrawableActivity extends Activity {
         switch (view.getId()){
             case R.id.switch_media:
                 if(switchMedia.isChecked()){
-                    show_area.setText("Media volume :ON, by clicking");
-                    audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,8,0);
+                    show_area.setText("Spot :ON, by clicking");
+                    //audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,8,0);
                 }else{
-                    show_area.setText("Media volume :Off, by clicking");
-                    audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,0,0);
-                }
-                break;
-            case R.id.switch_wifi:
-                if(switchWifi.isChecked()){
-                    show_area.setText("Wifi :ON, by clicking");
-                    wifiManager=(WifiManager) this.getSystemService(getApplicationContext().WIFI_SERVICE);
-                    wifiManager.setWifiEnabled(true);
-                }else{
-                    show_area.setText("Wifi :Off by clicking");
-                    wifiManager=(WifiManager) this.getSystemService(getApplicationContext().WIFI_SERVICE);
+                    show_area.setText("Spot :Off, by clicking");
+                    //audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,0,0);
                 }
                 break;
         }
-    }
-
-    public void button_click(){
-        if(is_enabled){
-            is_enabled=false;
-            enable_disable_switch.setText("Click to enable all switch");
-            show_area.setText("Switch is Disabled");
-        }else{
-            is_enabled=true;
-            enable_disable_switch.setText("Click to disable all switch");
-            show_area.setText("Switch is enabled");
-        }
-        switchWifi.setEnabled(is_enabled);
-        switchMedia.setEnabled(is_enabled);
-    }
-    public void setEnabled(){
-
     }
 }
 
