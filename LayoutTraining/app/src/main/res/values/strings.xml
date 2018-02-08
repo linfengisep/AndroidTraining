@@ -17,7 +17,7 @@
     <string name="disable_switch_text">Disable all switch</string>
     <string name="media_volume">Media Volume</string>
     <string name="wifi_text">Wifi</string>
-    <string name="pie_name">Pie name</string>
+    <string name="pie_name">Pie chart</string>
 
     <string-array name="vegetable_array">
         <item>Cucumber</item>
@@ -27,4 +27,40 @@
         <item>Squash</item>
     </string-array>
 
+    <string name="action_settings">Setting</string>
+    <string name="action_add_favourite">Add to favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">LOVE MUSIC</string>
+    <string name="backdrop_subtitle">This season top 20 albums</string>
+
+
+
 </resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

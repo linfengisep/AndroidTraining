@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <isep.layouttraining.PieChart
+        android:id="@+id/pie_chart_view"
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
-        android:text="not bad"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        app:name="@string/pie_name"
+        app:labelPosition="left"
         />
     <TextView
         android:layout_width="match_parent"

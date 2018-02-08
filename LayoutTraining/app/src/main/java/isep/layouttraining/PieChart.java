@@ -4,70 +4,49 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
-
-/**
- * Created by linfengwang on 06/02/2018.
- */
+import android.widget.TextView;
 
 public class PieChart extends View {
-    private Boolean mShowText=false;
-    private int mColor;
-    private int mLabolPosition;
-    private String mName;
+    public int labolPosition;
+    public String mName;
+    public TextView textView;
+    public PieChart(Context context){
+        super(context);
+    }
 
-    public PieChart(Context context, AttributeSet attrs){
+    public PieChart(Context context,AttributeSet attrs){
         super(context,attrs);
-        TypedArray ta = context.getTheme().obtainStyledAttributes(attrs,
+        init(attrs);
+    }
+
+    public PieChart(Context context, AttributeSet attrs,int defStyleAttr){
+        super(context,attrs,defStyleAttr);
+        init(attrs);
+    }
+
+    public void init(AttributeSet attrs){
+        //inflate(getContext(),R.layout.pie_chart_view,this);/////???
+        textView = findViewById(R.id.pie_chart);
+
+        TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs,
                 R.styleable.PieChart,0,0);
         try{
-            mShowText = ta.getBoolean(R.styleable.PieChart_showText,false);
-            mColor = ta.getColor(R.styleable.PieChart_pieColor,0);
-            mLabolPosition = ta.getInteger(R.styleable.PieChart_labelPosition,0);
+            labolPosition = ta.getInteger(R.styleable.PieChart_labelPosition,0);
             mName = ta.getString(R.styleable.PieChart_name);
+
+            textView.setText(mName);
+            if(labolPosition==1){
+                textView.setPadding(50,0,0,0);
+            }else{
+                textView.setPadding(0,0,50,0);
+            }
+            reDraw();
         } finally {
             ta.recycle();
         }
-    }
-
-    public Boolean getmShowText() {
-        return mShowText;
-    }
-
-    public void setmShowText(Boolean mShowText) {
-        this.mShowText = mShowText;
-        reDraw();
-    }
-
-    public int getmColor() {
-        return mColor;
-    }
-
-    public void setmColor(int mColor) {
-        this.mColor = mColor;
-        reDraw();
-    }
-
-    public int getmLabolPosition() {
-        return mLabolPosition;
-    }
-
-    public void setmLabolPosition(int mLabolPosition) {
-        this.mLabolPosition = mLabolPosition;
-        reDraw();
-    }
-
-    public String getmName() {
-        return mName;
-    }
-
-    public void setmName(String mName) {
-        this.mName = mName;
-        reDraw();
     }
     private void reDraw() {
         invalidate();
         requestLayout();
     }
-
-
 }
