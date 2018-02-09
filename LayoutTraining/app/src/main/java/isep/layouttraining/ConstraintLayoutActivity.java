@@ -25,5 +25,6 @@ public class ConstraintLayoutActivity extends Activity {
                 startActivity(intentCompoundView);
             }
         });
+
     }
 }

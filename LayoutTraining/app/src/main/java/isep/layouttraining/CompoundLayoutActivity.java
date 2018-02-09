@@ -1,6 +1,8 @@
 package isep.layouttraining;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -13,7 +15,7 @@ import android.widget.Button;
  */
 
 public class CompoundLayoutActivity extends Activity {
-    Button btnToRoundConnerView;
+    Button btnToRoundConnerView,missileBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +37,16 @@ public class CompoundLayoutActivity extends Activity {
             public void onClick(View v) {
                 Intent roundCornerView= new Intent(CompoundLayoutActivity.this,RoundCornerDrawableActivity.class);
                 startActivity(roundCornerView);
+            }
+        });
+
+        missileBtn = findViewById(R.id.missile_button);
+        missileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //fire a dialog instance;
+                FireMissileDialog fireMissile = new FireMissileDialog();
+                fireMissile.getShowsDialog();
             }
         });
     }

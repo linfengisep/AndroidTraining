@@ -32,7 +32,9 @@
     <string name="action_play_next">Play Next</string>
     <string name="backdrop_title">LOVE MUSIC</string>
     <string name="backdrop_subtitle">This season top 20 albums</string>
-
+    <string name="fire_missile_message">Fire the missile?</string>
+    <string name="fire">fire right now</string>
+    <string name="cancel">Fire aborted</string>
 
 
 </resources>

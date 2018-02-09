@@ -15,14 +15,16 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".RelativeLayoutActivity"/>
         <activity android:name=".ConstraintLayoutActivity"/>
-        <activity android:name=".CompoundLayoutActivity"/>
+        <activity android:name=".CompoundLayoutActivity">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+        </activity>
+
         <activity android:name=".RoundCornerDrawableActivity">
         </activity>
         <activity android:name=".CustomContainerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

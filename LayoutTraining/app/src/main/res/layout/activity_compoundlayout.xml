@@ -22,7 +22,16 @@
         android:layout_below="@id/sideSpinner_company"
         android:layout_centerHorizontal="true"
         sidespinner:values="@array/vegetable_array"/>
-
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/missile_button"
+        android:src="@drawable/missile"
+        android:layout_gravity="center"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/sideSpinner_vegetable"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="50dp"
