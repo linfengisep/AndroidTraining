@@ -35,6 +35,7 @@
     <string name="fire_missile_message">Fire the missile?</string>
     <string name="fire">fire right now</string>
     <string name="cancel">Fire aborted</string>
+    <string name="dialog_text">Do your realy want to fire the missile?</string>
 
 
 </resources>

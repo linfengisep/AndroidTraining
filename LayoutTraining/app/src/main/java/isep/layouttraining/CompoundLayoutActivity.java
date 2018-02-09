@@ -4,18 +4,22 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DialogFragment;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * Created by linfengwang on 30/01/2018.
  */
 
 public class CompoundLayoutActivity extends Activity {
-    Button btnToRoundConnerView,missileBtn;
+    Button btnToRoundConnerView;
+    ImageButton missileBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,8 +49,9 @@ public class CompoundLayoutActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //fire a dialog instance;
-                FireMissileDialog fireMissile = new FireMissileDialog();
-                fireMissile.getShowsDialog();
+                FireMissileDialog fireMissile = new FireMissileDialog(CompoundLayoutActivity.this);
+                fireMissile.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                fireMissile.show();
             }
         });
     }
