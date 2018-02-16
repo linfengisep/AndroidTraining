@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:src="@drawable/jinsanpang2"
+
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerInside"
+        android:id="@+id/jinzheng"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/cooperating" />
+    <EditText
+        android:id="@+id/username"
+        android:inputType="textEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/jinzheng"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/username" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_below="@id/username"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:hint="@string/password"/>
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package isep.googlemapplaying;
 
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -13,6 +14,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -43,6 +45,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng heartLeftTop2 = new LatLng(48.816410, 2.296155);
     LatLng heartRightTop = new LatLng(48.821350, 2.306000);
     LatLng heartRightTop2 = new LatLng(48.815370, 2.346051);
+    //circle
+    LatLng antonie = new LatLng(48.821350, 2.305214);
 
 /*
     static final CameraPosition cpNewyork = CameraPosition.builder()
@@ -154,6 +158,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .add(heartRightTop)
                 .add(heartRightTop2)
                 .add(heartBottom));
+
+        //circle
+        mMap.addCircle(new CircleOptions().center(antonie).fillColor(Color.rgb(66, 244, 235))).setRadius(1000);
     }
 
     @Override

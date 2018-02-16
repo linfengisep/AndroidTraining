@@ -36,6 +36,9 @@
     <string name="fire">fire right now</string>
     <string name="cancel">Fire aborted</string>
     <string name="dialog_text">Do your realy want to fire the missile?</string>
+    <string name="username">your name</string>
+    <string name="password">nuclaire code</string>
+    <string name="cooperating">jin_obama</string>
 
 
 </resources>

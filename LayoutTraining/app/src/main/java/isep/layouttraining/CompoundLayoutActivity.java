@@ -20,7 +20,7 @@ import android.widget.ImageButton;
 public class CompoundLayoutActivity extends Activity {
     Button btnToRoundConnerView;
     ImageButton missileBtn;
-
+    ImageButton jinsanpangBtn;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +52,15 @@ public class CompoundLayoutActivity extends Activity {
                 FireMissileDialog fireMissile = new FireMissileDialog(CompoundLayoutActivity.this);
                 fireMissile.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 fireMissile.show();
+            }
+        });
+
+        jinsanpangBtn=findViewById(R.id.jin);
+        jinsanpangBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                JinZhengEnMissile affaireEvent = new JinZhengEnMissile();
+                affaireEvent.show(getFragmentManager(),"show");
             }
         });
     }

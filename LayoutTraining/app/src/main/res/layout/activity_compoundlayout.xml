@@ -32,6 +32,17 @@
         android:layout_below="@+id/sideSpinner_vegetable"
         android:layout_centerHorizontal="true"
         android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/jin"
+        android:scaleType="centerInside"
+        android:src="@drawable/jinsanpang"
+        android:layout_below="@id/missile_button"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="50dp"

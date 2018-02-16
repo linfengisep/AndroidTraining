@@ -22,7 +22,7 @@
                 </intent-filter>
         </activity>
 
-        <activity android:name=".RoundCornerDrawableActivity">
+        <activity android:name=".RoundCornerDrawableActivity" android:theme="@android:style/Theme.Holo.Dialog">
         </activity>
         <activity android:name=".CustomContainerActivity">
         </activity>

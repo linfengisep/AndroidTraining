@@ -9,7 +9,6 @@ import android.widget.Button;
 
 public class FireMissileDialog extends Dialog implements android.view.View.OnClickListener{
     public Activity activity;
-    public Dialog dialog;
     public Button btnYes,btnNo;
 
     public FireMissileDialog(Activity fireEvent){
