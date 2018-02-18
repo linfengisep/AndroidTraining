@@ -1,18 +1,31 @@
-<ScrollView android:layout_width="match_parent"
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <!--TODO (1) Add a ScrollView around the TextView so you can scroll through the list of toys-->
-        <!--TODO (2) Make the width of the ScrollView match_parent and the height wrap_content-->
+    android:orientation="vertical"
+    >
+    <!--TODO (1) Add a ScrollView around the TextView so you can scroll through the list of toys-->
+    <!--TODO (2) Make the width of the ScrollView match_parent and the height wrap_content-->
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_toy_scroll"
+        xmlns:android="http://schemas.android.com/apk/res/android">
         <TextView
             android:id="@+id/my_toy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:textSize="20sp"/>
-            <!--android:scrollbars="vertical"-->
-    </FrameLayout>
-</ScrollView>
+    </ScrollView>
+        <!--android:scrollbars="vertical"-->
+    <Button
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_toy_scroll"
+        android:id="@+id/to_t0101_btn"
+        android:onClick="goToT0201"
+        android:textColor="@color/colorAccent"
+        android:text="Next"/>
+</FrameLayout>
