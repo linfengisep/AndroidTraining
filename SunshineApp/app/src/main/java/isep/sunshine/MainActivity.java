@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToRecyclerView(View view){
-        Intent intent = new Intent(MainActivity.this, RecyclerForecast.class);
+        Intent intent = new Intent(MainActivity.this, Forecast.class);
         startActivity(intent);
     }
 
