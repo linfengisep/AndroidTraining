@@ -28,4 +28,9 @@
         android:onClick="goToT0201"
         android:textColor="@color/colorAccent"
         android:text="Next"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lifecycle_part"
+        />
 </FrameLayout>
