@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:sidespinner="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
     android:paddingBottom="10dp">
     <isep.layouttraining.CompoundLayoutView
         android:layout_marginTop="25dp"
@@ -51,5 +51,16 @@
         android:background="@color/cardbackground"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        />
+    <Switch
+        android:id="@+id/mySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="ON"
+        android:thumb="@drawable/switch_thumb_test"
+        android:track="@drawable/switch_track_test"
+        android:textOff="OFF"
+        android:layout_centerHorizontal="true"
+        />
 </RelativeLayout>
