@@ -14,18 +14,4 @@
         actionbarcompat_mse:showAsAction="always"
         android:title="Two">
     </item>
-    <item
-        android:id="@+id/action_three"
-        android:icon="@drawable/ic_android"
-        android:orderInCategory="0"
-        actionbarcompat_mse:showAsAction="always"
-        android:title="One2">
-    </item>
-    <item
-        android:id="@+id/action_four"
-        android:icon="@drawable/ic_android"
-        android:orderInCategory="0"
-        actionbarcompat_mse:showAsAction="ifRoom"
-        android:title="Two2">
-    </item>
 </menu>

@@ -15,10 +15,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-/**
- * Created by linfengwang on 30/01/2018.
- */
-
 public class CompoundLayoutActivity extends AppCompatActivity {
     Button btnToRoundConnerView;
     ImageButton missileBtn;
@@ -85,14 +81,6 @@ public class CompoundLayoutActivity extends AppCompatActivity {
                 break;
             case R.id.action_two:
                 Toast.makeText(this, "two selected", Toast.LENGTH_SHORT)
-                        .show();
-                break;
-            case R.id.action_three:
-                Toast.makeText(this, "three selected", Toast.LENGTH_SHORT)
-                        .show();
-                break;
-            case R.id.action_four:
-                Toast.makeText(this, "four selected", Toast.LENGTH_SHORT)
                         .show();
                 break;
             default:break;
