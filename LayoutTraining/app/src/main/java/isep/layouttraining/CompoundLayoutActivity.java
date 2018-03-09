@@ -67,25 +67,5 @@ public class CompoundLayoutActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_toolbar,menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem){
-        switch (menuItem.getItemId()){
-            case R.id.action_one:
-                Toast.makeText(this, "one selected", Toast.LENGTH_SHORT)
-                        .show();
-                break;
-            case R.id.action_two:
-                Toast.makeText(this, "two selected", Toast.LENGTH_SHORT)
-                        .show();
-                break;
-            default:break;
-        }
-        return super.onOptionsItemSelected(menuItem);
-    }
 }
 
