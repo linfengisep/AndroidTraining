@@ -9,10 +9,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     public TextView mToysListTextView;
     public String s;
-    public String TAG = this.getClass().getName();
     private static final String TAG = MainActivity.class.getSimpleName();
     private TextView mLifecycleDisplay;
     private static final ArrayList<String> mLifecycleCallbacks = new ArrayList<>();

@@ -8,10 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.kyleduo.switchbutton.SwitchButton;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,6 +29,7 @@ public class T0201 extends AppCompatActivity {
     TextView mSearchResultsTextView;
     TextView errorMessage;
     ProgressBar progressBar;
+    SwitchButton btnIOS;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +40,10 @@ public class T0201 extends AppCompatActivity {
         mSearchResultsTextView = (TextView)findViewById(R.id.tv_github_search_results_json);
         errorMessage = (TextView)findViewById(R.id.error_message_display);
         progressBar = (ProgressBar)findViewById(R.id.pb_loading_indicator);
+        btnIOS = (SwitchButton)findViewById(R.id.switch_btn);
+
+        btnIOS.setThumbDrawableRes(R.drawable.switch_thumb);
+        btnIOS.setFadeBack(true);
     }
     private void makeGithubSearchQuery(){
         String githubQuery = mSearchBoxEditText.getText().toString();
